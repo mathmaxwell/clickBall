@@ -4,14 +4,17 @@ let time
 const input = document.querySelector('.time')
 const button = document.querySelector('.button')
 const ball = document.querySelector('.ball')
+const text = document.querySelector('.text')
 let score = 0
-
+let first
 startButton.addEventListener('click', () => {
 	if (document.querySelector('.time').value > 0) {
+		first = document.querySelector('.time').value
 		ball.style.display = 'block'
 		input.style.display = 'none'
 		button.style.display = 'none'
 		time = document.querySelector('.time')
+		score = 0
 		ballClick()
 		timing()
 	}
@@ -21,8 +24,14 @@ function timing() {
 	if (time.value > 0) {
 		setTimeout(timing, 1000)
 	}
+
 	if (time.value == 0) {
 		title.textContent = `vaqt tugadi, sizning natijangiz ${score - 1} ta`
+		ball.style.display = 'none'
+		button.style.display = 'block'
+		text.textContent = 'qayta boshlash'
+		input.style.display = 'block'
+		time.value = +first + 1
 	}
 	time.value--
 }
