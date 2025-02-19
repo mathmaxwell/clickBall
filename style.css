@@ -26,11 +26,17 @@
 	background-color: yellow;
 	margin: 0 auto;
 	margin-top: 20px;
+}
+.form {
 	display: flex;
-	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 	gap: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 .time {
 	border: none;
@@ -39,11 +45,30 @@
 	font-size: 25px;
 	text-align: center;
 	outline: none;
+	width: 400px;
+	border: 2px solid #ccc;
+	border-radius: 8px;
+}
+.difficult {
+	padding: 15px;
+	color: black;
+	font-size: 25px;
+	text-align: center;
+	outline: none;
+	width: 400px;
+	border: 2px solid #ccc;
+	border-radius: 8px;
 }
 .button {
-	background-color: green;
+	background-color: #4caf50;
 	padding: 15px;
+	color: white;
 	border-radius: 10px;
+	font-size: 20px;
+	cursor: pointer;
+}
+.button:hover {
+	background-color: #45a049;
 }
 .text {
 	color: white;
